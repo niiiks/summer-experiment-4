@@ -11,7 +11,8 @@ char a;
 
 do
 {
-int c,x,y;
+int c;
+double x,y;
 
 cout << "MENU:"<< endl;
 cout << "1.addition"<< endl;
@@ -58,13 +59,12 @@ break;
 
 
 case 4:
-cout<< fixed<< showpoint;
 cout << "input value for x: ";
 cin >> x;
 cout << "input value for y: ";
 cin >> y;
 cout << "the application to be performed is division!"<<endl;
-cout << "the quotient of the two values is : "  << setprecision(2)  << x/y;
+cout << "the quotient of the two values is : "  << fixed << showpoint << setprecision(2)  << x/y;
 break;
 
 
@@ -75,7 +75,7 @@ cin >> x;
 cout << "input value for y: ";
 cin >> y;
 cout << "the application to be performed is modulus! "<< endl;
-cout << "the remainder of the two values after dividing is: "<< x%y;
+cout << "the remainder of the two values after dividing is: "<< fmod(x,y);
 break;
 
 default:
@@ -94,4 +94,3 @@ cout << "thankyou!";
 getch();
 return 0;
 }
-
